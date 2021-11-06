@@ -30,6 +30,9 @@ requirements:
 #     - ruamel.yaml
 #   imports:
 #     - _ruamel_yaml
+test:
+  commands:
+    - echo "OK"
 
 about:
   home: https://bitbucket.org/ruamel/yaml.clib
