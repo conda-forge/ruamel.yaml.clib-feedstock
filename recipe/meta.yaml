@@ -20,6 +20,8 @@ requirements:
   host:
     - python
     - pip
+    # Try to work around some recent issues with setuptools
+    - setuptools <58.5
   run:
     - python
 
