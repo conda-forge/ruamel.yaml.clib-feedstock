@@ -32,10 +32,12 @@ requirements:
     - cython <3                              # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - python
     - cython <3
     - pip
+    - setuptools
   run:
     - python
 
