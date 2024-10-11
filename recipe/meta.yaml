@@ -21,7 +21,7 @@ source:
       - fix-typecasts-s390x._ruamel_yaml.pxd.patch
 
 build:
-  number: 0
+  number: 1
   script:
     - cythonize _ruamel_yaml.pyx
     - {{ PYTHON }} -m pip install . -vv
