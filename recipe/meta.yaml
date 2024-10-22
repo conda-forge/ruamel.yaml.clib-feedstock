@@ -1,4 +1,4 @@
-{% set version = "0.2.8" %}
+{% set version = "0.2.12" %}
 
 package:
   name: ruamel.yaml.clib
@@ -6,22 +6,22 @@ package:
 
 source:
   - url: https://pypi.io/packages/source/r/ruamel.yaml.clib/ruamel.yaml.clib-{{ version }}.tar.gz
-    sha256: beb2e0404003de9a4cab9753a8805a8fe9320ee6673136ed7f04255fe60bb512
+    sha256: 6c8fbb13ec503f99a91901ab46e0b07ae7941cd527393187039aec586fdfd36f
   - url: https://sourceforge.net/p/ruamel-yaml-clib/code/ci/{{ version }}/tree/_ruamel_yaml.pyx?format=raw
-    sha256: fb6b5653201f1ed89a951f6931fda377737156c4f30cadbd240f4d28f607665a
+    sha256: 83d401743b71b9f8bf154579b2b6d1a54aba7eab329fcac3ab5f9c56fc36d025
     fn: _ruamel_yaml.pyx
     patches:
       # Patch from Fedora to address https://sourceforge.net/p/ruamel-yaml-clib/tickets/22/
       - fix-typecasts-s390x._ruamel_yaml.pyx.patch
   - url: https://sourceforge.net/p/ruamel-yaml-clib/code/ci/{{ version }}/tree/_ruamel_yaml.pxd?format=raw
-    sha256: ee35a75fd753a369bee439ec7e1826e77c7feaabf9c3ec9cf2f58110c7a95656
+    sha256: 0ec9833b22e0e309a60edf900e3571df17bb3edea6d34d81fe07f517c7d70b90
     fn: _ruamel_yaml.pxd
     patches:
       # Patch from Fedora to address https://sourceforge.net/p/ruamel-yaml-clib/tickets/22/
       - fix-typecasts-s390x._ruamel_yaml.pxd.patch
 
 build:
-  number: 1
+  number: 0
   script:
     - cythonize _ruamel_yaml.pyx
     - {{ PYTHON }} -m pip install . -vv
