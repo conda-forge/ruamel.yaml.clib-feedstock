@@ -1,6 +1,6 @@
 diff -r df8c53ddf0d3 setup.py
---- a/setup.py  Sun Oct 20 11:56:33 2024 +0200
-+++ b/setup.py  Wed May 28 15:13:11 2025 +0200
+--- a/setup.py
++++ b/setup.py
 @@ -75,9 +75,6 @@
              print('{:%Y-%d-%mT%H:%M:%S}'.format(datetime.datetime.now()), file=fp, end=' ')
              print(*args, **kw1)
@@ -40,3 +40,4 @@ diff -r df8c53ddf0d3 setup.py
          elif sys.version_info < (3, 4) and isinstance(node, Name):
  
              if node.id in _safe_names:
+
