@@ -1,18 +1,15 @@
-{% set version = "0.2.12" %}
+{% set version = "0.2.13" %}
 
 package:
   name: ruamel.yaml.clib
   version: {{ version }}
 
 source:
-  - url: https://pypi.io/packages/source/r/ruamel.yaml.clib/ruamel.yaml.clib-{{ version }}.tar.gz
-    sha256: 6c8fbb13ec503f99a91901ab46e0b07ae7941cd527393187039aec586fdfd36f
-    patches:
-      # 0.2.13 will likely make this unnecessary
-      - patches/0001-py314.patch
+  - url: https://pypi.org/packages/source/r/ruamel.yaml.clib/ruamel.yaml.clib-{{ version }}.tar.gz
+    sha256: 8d4f8d7853053a5a19171a0f515f1e14f503bd3e772c4da6bafe7d0893d4f299
 
 build:
-  number: 1
+  number: 0
   script:
     - cythonize _ruamel_yaml.pyx
     - {{ PYTHON }} -m pip install . -vv
