@@ -7,9 +7,6 @@ package:
 source:
   - url: https://pypi.org/packages/source/r/ruamel.yaml.clib/ruamel.yaml.clib-{{ version }}.tar.gz
     sha256: 8d4f8d7853053a5a19171a0f515f1e14f503bd3e772c4da6bafe7d0893d4f299
-    patches:
-      # 0.2.13 will likely make this unnecessary
-      - patches/0001-py314.patch
 
 build:
   number: 0
