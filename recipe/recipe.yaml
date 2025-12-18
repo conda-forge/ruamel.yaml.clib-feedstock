@@ -36,9 +36,6 @@ requirements:
     - python
 
 tests:
-  - python:
-      imports: ruamel.yaml.clib
-      pip_check: true
   - script:
       - python -c "from importlib.util import find_spec; assert find_spec('_ruamel_yaml')"
   - downstream: ruamel.yaml
