@@ -3,11 +3,13 @@ About ruamel.yaml.clib-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ruamel.yaml.clib-feedstock/blob/main/LICENSE.txt)
 
-Home: https://sourceforge.net/projects/ruamel-yaml-clib/
+Home: https://pypi.org/project/ruamel.yaml.clib
 
 Package license: MIT
 
 Summary: C version of reader, parser and emitter for ruamel.yaml derived from libyaml
+
+Development: https://sourceforge.net/projects/ruamel-yaml-clib
 
 Current build status
 ====================
@@ -365,6 +367,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@bollwyvl](https://github.com/bollwyvl/)
 * [@mbargull](https://github.com/mbargull/)
 * [@ocefpaf](https://github.com/ocefpaf/)
 
